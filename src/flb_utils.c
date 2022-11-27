@@ -630,7 +630,7 @@ static inline void encoded_to_buf(char *out, const char *in, int len)
 
 /*
  * Write string pointed by 'str' to the destination buffer 'buf'. It's make sure
- * to escape sepecial characters and convert utf-8 byte characters to string
+ * to escape special characters and convert utf-8 byte characters to string
  * representation.
  */
 int flb_utils_write_str(char *buf, int *off, size_t size,

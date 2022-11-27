@@ -153,6 +153,12 @@ char *removeProtocol (char *endpoint, char *protocol) {
     return endpoint;
 }
 
+void removeTrailSlash (char *endpoint) {
+    if (endpoint[strlen(endpoint)-1] == '/') {
+        endpoint[strlen(endpoint)-1] = '\0';
+    }
+}
+
 struct flb_http_client *flb_aws_client_request(struct flb_aws_client *aws_client,
                                                int method, const char *uri,
                                                const char *body, size_t body_len,

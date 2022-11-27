@@ -108,6 +108,7 @@ static int cb_kinesis_init(struct flb_output_instance *ins,
     if (tmp) {
         ctx->custom_endpoint = FLB_TRUE;
         ctx->endpoint = removeProtocol((char *) tmp, "https://");
+        removeTrailSlash(ctx->endpoint);
     }
     else {
         ctx->custom_endpoint = FLB_FALSE;
